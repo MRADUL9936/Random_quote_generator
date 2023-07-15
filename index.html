@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Your Quote</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+.container{
+    display:flex;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+ text-align:center;
+}
+.card{
+    background-color: white;
+   max-width:500px;
+    border-radius:2rem;
+    padding-top:30px;
+}
+.greet{
+    font-size:1.9rem;
+    margin:1rem 0;
+    color:white;
+}
+.quote{
+    font-size:1.5rem;
+    padding-top:10px;
+    padding-right:20px;
+    padding-left:20px;
+    padding-bottom:10px
+
+}
+.WriterName{
+    font-size:1.5rem;
+    text-align:right;
+    padding-right:20px;
+    padding-top:20px;
+}
+.btn{
+    border:none;
+    border-radius:5px;
+    font-size:1.3rem;
+    color:white;
+    padding:10px;
+    margin:30px;
+    
+}
+.btn:hover{
+    background-color: antiquewhite !important;
+}.btn:active{
+    background-color: rgb(245, 222, 192) !important;
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div >
+        <div class="greet">Let's start our <span id="greet-time"></span>with a new quote.</div>
+        <div class="card ">
+            <i class="fa fa-quote-left"></i>
+            <div class="quote"></div>
+            <i class="fa fa-quote-right"></i>
+            <div class="WriterName"></div>
+
+        <button type="button" class="btn">New quote</button>
+        </div>
+    </div>
+    </div>
+
+<script>
+
+ var colors=["rgb(36, 144, 238)","rgb(128, 237, 213)","rgb(136, 143, 240)","rgb(216, 124, 235)","rgb(244, 141, 141)"
+,"rgb(125, 239, 125)","rgb(244, 254, 99)","rgb(236, 117, 117)","rgb(225, 98, 183)","rgb(130, 234, 206)"];
+ 
+
+document.querySelector(".btn").addEventListener("click",function(){
+    random_quote();
+random_color();
+
+});
+    function random_color()
+    { var random_no=Math.floor(Math.random()*10);
+       var bgr_color=colors[random_no];
+       console.log(bgr_color);
+       document.body.style.backgroundColor =bgr_color;
+       document.querySelector(".quote").style.color=bgr_color;
+       document.querySelector(".WriterName").style.color=bgr_color;
+       document.querySelector(".fa-quote-left").style.color=bgr_color;
+       document.querySelector(".fa-quote-right").style.color=bgr_color;
+       document.querySelector(".btn").style.backgroundColor=bgr_color;
+
+       
+    }
+    const today=new Date();
+    var h=today.getHours();
+    var time;
+    if(h>=0)
+    time="Morning ";
+    if(h>=12)
+          time="Noon ";
+    if(h>=20)
+    time="Night ";
+    document.getElementById("greet-time").innerHTML=time;
+
+    var quotes=["Hard work is worthless for those that don’t believe in themselves.",
+   "Growth occurs when one goes beyond one’s limits. Realizing that is also part of training.",
+"People’s lives don’t end when they die, it ends when they lose faith.",
+"Because of the existence of love – sacrifice is born. As well as hate. Then one comprehends… one knows PAIN.",
+"A dropout will beat a genius through hard work.",
+"It’s human nature not to realize the true value of something unless they lose it.",
+"There is no heaven or hell. No matter what you do while you’re alive, everybody goes to the same place once you die. Death is Equal.",
+"Being alone is better than being with the wrong person.",
+"You have the gift of perseverance, and that’s what makes you a genius too.",
+"If You Can't Beat The Game, If You Can't Solve The Puzzle, You're Nothing But A Loser."]
+    var writers=["– Naruto uzumaki ","– Itachi Uchiha","– Itachi Uchiha","– Nagato Uzumaki","– Rock Lee","– Orochimaru","– L Lawliet","– L Lawliet","– Might Guy","– Near"];
+
+    random_quote();
+random_color();
+ function random_quote(){
+    var ranno=Math.floor(Math.random()*10);
+    console.log(quotes[ranno]);
+ document.querySelector(".quote").innerHTML=quotes[ranno];
+ document.querySelector(".WriterName").innerHTML=writers[ranno];
+ }
+
+</script>
+
+</body>
+</html>
