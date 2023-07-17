@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Your Quote</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<!-- css -->
     <style>
 .container{
     display:flex;
@@ -71,12 +73,25 @@
         </div>
     </div>
     </div>
-
+<!-- javascript -->
 <script>
-
+ // Array of colors
  var colors=["rgb(36, 144, 238)","rgb(128, 237, 213)","rgb(136, 143, 240)","rgb(216, 124, 235)","rgb(244, 141, 141)"
 ,"rgb(125, 239, 125)","rgb(244, 254, 99)","rgb(236, 117, 117)","rgb(225, 98, 183)","rgb(130, 234, 206)"];
  
+// Array of quotes
+    var quotes=["Hard work is worthless for those that don’t believe in themselves.",
+   "Growth occurs when one goes beyond one’s limits. Realizing that is also part of training.",
+"People’s lives don’t end when they die, it ends when they lose faith.",
+"Because of the existence of love – sacrifice is born. As well as hate. Then one comprehends… one knows PAIN.",
+"A dropout will beat a genius through hard work.",
+"It’s human nature not to realize the true value of something unless they lose it.",
+"There is no heaven or hell. No matter what you do while you’re alive, everybody goes to the same place once you die. Death is Equal.",
+"Being alone is better than being with the wrong person.",
+"You have the gift of perseverance, and that’s what makes you a genius too.",
+"If You Can't Beat The Game, If You Can't Solve The Puzzle, You're Nothing But A Loser."]
+    // Array of Writers
+var writers=["– Naruto uzumaki ","– Itachi Uchiha","– Itachi Uchiha","– Nagato Uzumaki","– Rock Lee","– Orochimaru","– L Lawliet","– L Lawliet","– Might Guy","– Near"];
 
 document.querySelector(".btn").addEventListener("click",function(){
     random_quote();
@@ -106,18 +121,6 @@ random_color();
     if(h>=20)
     time="Night ";
     document.getElementById("greet-time").innerHTML=time;
-
-    var quotes=["Hard work is worthless for those that don’t believe in themselves.",
-   "Growth occurs when one goes beyond one’s limits. Realizing that is also part of training.",
-"People’s lives don’t end when they die, it ends when they lose faith.",
-"Because of the existence of love – sacrifice is born. As well as hate. Then one comprehends… one knows PAIN.",
-"A dropout will beat a genius through hard work.",
-"It’s human nature not to realize the true value of something unless they lose it.",
-"There is no heaven or hell. No matter what you do while you’re alive, everybody goes to the same place once you die. Death is Equal.",
-"Being alone is better than being with the wrong person.",
-"You have the gift of perseverance, and that’s what makes you a genius too.",
-"If You Can't Beat The Game, If You Can't Solve The Puzzle, You're Nothing But A Loser."]
-    var writers=["– Naruto uzumaki ","– Itachi Uchiha","– Itachi Uchiha","– Nagato Uzumaki","– Rock Lee","– Orochimaru","– L Lawliet","– L Lawliet","– Might Guy","– Near"];
 
     random_quote();
 random_color();
